@@ -1,4 +1,4 @@
-let target = Math.floor(Math.random() * 10) + 1;
+let target = Math.floor(Math.random() * 100) + 1;
 let attempts = 0;
 let prevGuess = null;
 
