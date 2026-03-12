@@ -11,8 +11,8 @@ const submitbtn = document.getElementById("submit-btn");
 input.addEventListener('input', function() {
     this.value = this.value.replace(/[^0-9]/g, '');
 
-    if (parseInt(this.value) > 10) {
-        this.value = 10;
+    if (parseInt(this.value) > 100) {
+        this.value = 100;
     }
 
     submitbtn.disabled = !this.checkValidity();
@@ -53,9 +53,9 @@ document.getElementById('game-form').onsubmit = function(event) {
 
     }
 
-    if (attempts >= 10) {
+    if (attempts >= 25) {
         attemptDisplay.style.color = "red";
-    } else if (attempts > 5) {
+    } else if (attempts > 10) {
         attemptDisplay.style.color = "#FFBF00";
     } else {
         attemptDisplay.style.color = "green";
@@ -69,7 +69,7 @@ function endGame() {
 };
 
 resetbtn.onclick = function() {
-    target = Math.floor(Math.random() * 10) + 1;
+    target = Math.floor(Math.random() * 100) + 1;
     attempts = 0;
 
     attemptDisplay.textContent = "0";
