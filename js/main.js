@@ -13,6 +13,8 @@ input.addEventListener('input', function() {
 
     if (parseInt(this.value) > 100) {
         this.value = 100;
+    } elif (parseInt(this.value) < 1) {
+        submit.disabled = true;
     }
 
     submitbtn.disabled = !this.checkValidity();
