@@ -5,7 +5,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Guessing Game</title>
-
         <link rel="stylesheet" href="css/style.css">
         <script src="js/main.js" defer></script>
     </head>
@@ -20,10 +19,10 @@
             <h2>Guess the Number!</h2>
             
             <form id="game-form">
-                <input type="number" id="guess" placeholder="1-10">
+                <input type="number" id="guess" placeholder="1-10" min="1" max="10" step="1" required>
 
                 <div id="button-container">
-                    <button type="submit" id="submit-btn">Guess</button>
+                    <button type="submit" id="submit-btn" disabled>Guess</button>
                     <button type="button" id="reset-btn" style="display:none;">Play Again</button>
                 </div>
 
