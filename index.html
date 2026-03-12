@@ -10,32 +10,49 @@
     </head>
 
     <body>
-    <header>
-        <h1 class="title" id="main-title">Guessing game!</h1>
-    </header>
+        <button type="buton" id="help-btn">?</button>
+        <header>
+            <h1 class="title" id="main-title">Guessing game!</h1>
+        </header>
 
-    <main>
-        <section class="game-container">
-            <h2>Guess the Number!</h2>
-            
-            <form id="game-form">
-                <input type="number" id="guess" placeholder="1-100" min="1" max="100" step="1" required>
+        <main>
+            <section class="game-container">
+                <h2>Guess the Number!</h2>
 
-                <div id="button-container">
-                    <button type="submit" id="submit-btn" disabled>Guess</button>
-                    <button type="button" id="reset-btn" style="display:none;">Play Again</button>
+                <div id="difficulty-settings">
+                    <label>Difficulty</label>
+                    <button type="button" class="btn" id="difficulty-btn">Easy</button>
                 </div>
+                
+                <form id="game-form">
+                    <input type="number" id="guess" placeholder="1-100" min="1" max="100" step="1" required>
 
-            </form>
+                    <nav id="controls">
+                        <button type="submit" id="submit-btn" disabled>Guess</button>
+                        <button type="button" id="reset-btn" style="display:none;">Play Again</button>
+                    </nav>
+                </form>
 
-            <p id="message"></p>
-            <p>Attempts: <span id="attempt-count">0</span></p>
-        </section>
+                <aside id="status">
+                    <p id="message"></p>
+                    <p>Previous guesses: <span id="history">None</span></p>
+                    <p>Attempts: <span id="attempt-count">0</span></p>
+                    <p>Win Streak: <span id="streak-count">0</span></p>
+                </aside>
+            </section>
 
-    </main>
 
-    <footer>
-    </footer>
+        </main>
+        
+        <dialog id="help-modal">
+            <h2>How to Play</h2>
+            <ul>
+                <li>Pick a difficulty</li>
+                <li>Try to guess the number</li>
+                <li>You have 10 lives</li>
+            </ul>
+            <button id="close-help">Got it!</button>
 
+        </dialog>
     </body>
 </html>
