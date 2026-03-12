@@ -74,6 +74,7 @@ resetbtn.onclick = function() {
 
     attemptDisplay.textContent = "0";
     message.textContent = "";
+    attemptsDisplay.style.color = "green";
     document.getElementById('guess').value = "";
     prevGuess = 0;
 
