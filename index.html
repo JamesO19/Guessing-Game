@@ -16,12 +16,12 @@
         </header>
 
         <main>
-            <section class="game-container">
+            <section id="game-container">
                 <h2>Guess the Number!</h2>
 
                 <div id="difficulty-settings">
                     <label>Difficulty</label>
-                    <button type="button" class="btn" id="difficulty-btn">Easy</button>
+                    <button type="button" class="btn" id="difficulty-btn">Easy (1-100)</button>
                 </div>
                 
                 <form id="game-form">
@@ -38,11 +38,19 @@
                     <p>Previous guesses: <span id="history">None</span></p>
                     <p>Attempts: <span id="attempt-count">0</span></p>
                     <p>Win Streak: <span id="streak-count">0</span></p>
+                    <p>Points: <span id="point-count">0</span></p>
                 </aside>
             </section>
 
-
         </main>
+        
+        <dialog id="shop-modal">
+            <h2>Shop</h2>
+            <div id="buy-points">
+                <button id="add-points">+1 points! Cost: <span id="add-points-price">100</span></button>
+            </div>
+
+        </dialog>
         
         <dialog id="help-modal">
             <h2>How to Play</h2>
@@ -52,6 +60,7 @@
                 <li>You have 10 lives</li>
             </ul>
             <button id="close-help">Got it!</button>
+            <button id="clear-stats-btn">Clear stats</button>
 
         </dialog>
     </body>
